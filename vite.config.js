@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/explosion/',
+    base: '/embalada/',
     build: {
         chunkSizeWarningLimit: 1500,
     }

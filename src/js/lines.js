@@ -4,10 +4,10 @@ export function drawLines(p, palette, size) {
     if (!p || !palette || !width || !height) return;
 
     for (let i = 0; i < 60; i++) {
-        let x1 = width;
-        let y1 = height;
-        let x2 = p.random(-0.5 * width, 0.5 * width);
-        let y2 = p.random(-0.5 * height, 0.5 * height);
+        let x1 = width / 2;
+        let y1 = height / 2;
+        let x2 = p.random(-0.1, 1.1 * width);
+        let y2 = p.random(-0.2 * height / 2, 1.2 * height);
         p.stroke(p.random(palette));
 
         let dx = x2 - x1;
@@ -25,7 +25,7 @@ export function drawLines(p, palette, size) {
             );
 
             x += (-dy / len) * curve;
-            y += ( dx / len) * curve;
+            y += (dx / len) * curve;
 
             let nextT = t + 0.02;
             let nextX = p.lerp(x1, x2, nextT);
