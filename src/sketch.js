@@ -80,7 +80,7 @@ new p5((p) => {
             if (linesLayer) {
                 linesLayer.remove();
                 refreshLines(linesNbr);
-                rate = rate * 0.9;
+                rate = rate * 0.8;
                 linesNbr += 5;
                 if (linesNbr >= 120) linesNbr = 120;
             }
